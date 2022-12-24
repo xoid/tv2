@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo 'Content-type: text/plane; charset: utf-8'
+echo
+cat /etc/now_playing.url
+exit 0

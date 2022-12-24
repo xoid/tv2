@@ -3,12 +3,18 @@
 use strict; use warnings; use v5.22; use utf8;
 
 my @stdin = <>;
-warn %ENV;
+#warn %ENV;
 
 if (@stdin)
 {
   warn @stdin;
   system "echo @stdin > /etc/now_playing.url";
+  system "killall mpv";
+}
+
+if ($ENV{QUERY_STRING} =~ /cmd=(.*)/)
+{
+  my $cmd = $1;
 
 }
 
