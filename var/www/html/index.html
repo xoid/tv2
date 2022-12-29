@@ -56,7 +56,11 @@
 </head>
 <body>
 
-<a href='javascript:play_url("");'> STOP </a> &nbsp; <a href=/restart> restart </a> &nbsp; <a href="http://arm:9091"> torrent </a> &nbsp; <a href="video.html"> Video </a> &nbsp; <br> 
+<a onclick='play_url("");'>           STOP </a> &nbsp;
+<a onclick='play_url(now_playing);'>  restart </a> &nbsp;
+<a href="http://tv.:9091">            torrent </a> &nbsp;
+<a href="video.html">                 Video </a> &nbsp; 
+<br>
 Now playing: <span id='nowplaying'>%nowplayingurl%</span>
 <br>
 Для поиска нажмите Ctrl F 
@@ -165,6 +169,16 @@ Now playing: <span id='nowplaying'>%nowplayingurl%</span>
 &nbsp; <a  href='vlc://https://31kz-streams.daitsuna.net/31kz/31kz_1080/chunks.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://92.46.127.146:8080/31Channel/index.m3u8</a>
 &nbsp; <a  href='vlc://http://92.46.127.146:8080/31Channel/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
+312<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://176.126.166.43:1935/live/312musik/playlist.m3u8</a>
+&nbsp; <a  href='vlc://http://176.126.166.43:1935/live/312musik/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
+312 Kino<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://176.126.166.43:1935/live/312kino/playlist.m3u8</a>
+&nbsp; <a  href='vlc://http://176.126.166.43:1935/live/312kino/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 360<br>
@@ -496,14 +510,9 @@ Demo 4k <img src='https://af-play.com/storage/images/pack_logos/5351a2bad4de9202
 &nbsp; <a  href='vlc://http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-4k/video.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Demo Музыка <img src='https://af-play.com/storage/images/pack_logos/d6f9c3b93762c4fe1391f50cd62696f8.png' width=32 height=32><br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-music/video.m3u8</a>
-&nbsp; <a  href='vlc://http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-music/video.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-Demo Музыка HD <img src='https://af-play.com/storage/images/pack_logos/bb77425cc336c383419a6348141fc3fb.png' width=32 height=32><br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-music-hd/video.m3u8</a>
-&nbsp; <a  href='vlc://http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-music-hd/video.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+Demo Природа <img src='https://af-play.com/storage/images/pack_logos/8f647d43a618a475303b6dbbabc2ae60.png' width=32 height=32><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-nature/video.m3u8</a>
+&nbsp; <a  href='vlc://http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-nature/video.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Discovery<br>
@@ -626,11 +635,6 @@ Hollywood<br>
 &nbsp; <a  href='vlc://https://sc.id-tv.kz/Hollywood_34_35.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Iluki TV<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://video.iluki.ru/tv_in/index.m3u8</a>
-&nbsp; <a  href='vlc://https://video.iluki.ru/tv_in/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
 Irbis TV<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://sc.id-tv.kz/IRBISTV_34_35.m3u8</a>
 &nbsp; <a  href='vlc://https://sc.id-tv.kz/IRBISTV_34_35.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -670,7 +674,7 @@ Kino Watch TV Свежаки<br>
 &nbsp; <a  href='vlc://https://edge-01.kino.watch/fresh/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Kino Watch TV Ужастик<br>
+Kino Watch TV Ужастики<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://edge-01.kino.watch/horror/index.m3u8</a>
 &nbsp; <a  href='vlc://https://edge-01.kino.watch/horror/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
@@ -739,13 +743,6 @@ MOSOBR TV HD<br>
 Mafi2a Music<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://stream.funcontent.ru/hls/tv12/index.m3u8</a>
 &nbsp; <a  href='vlc://https://stream.funcontent.ru/hls/tv12/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-Maidan TV<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://hls-iptv.tattelecom.ru:80/online_tv_Maydan/tracks-v1a1/index.m3u8</a>
-&nbsp; <a  href='vlc://http://hls-iptv.tattelecom.ru:80/online_tv_Maydan/tracks-v1a1/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-maidantv.cdnvideo.ru/maidantv/maidantv_480/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://live-maidantv.cdnvideo.ru/maidantv/maidantv_480/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Maidan TV HD<br>
@@ -1062,6 +1059,8 @@ TV 1000 Action HD<br>
 TV 1000 Русское кино<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://bl.uma.media/live/485543/HLS/4614144_3/2/1/playlist.m3u8</a>
 &nbsp; <a  href='vlc://https://bl.uma.media/live/485543/HLS/4614144_3/2/1/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://sc.id-tv.kz/TV1000RuKino_34_35.m3u8</a>
+&nbsp; <a  href='vlc://https://sc.id-tv.kz/TV1000RuKino_34_35.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://tv.streams.baikal-telecom.net/TV1000RuKino/index.m3u8</a>
 &nbsp; <a  href='vlc://http://tv.streams.baikal-telecom.net/TV1000RuKino/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://okkotv-live.cdnvideo.ru/channel/TV1000_Rus_Kino_HD/480p.m3u8</a>
@@ -1113,11 +1112,6 @@ TV1<br>
 TV1 (KG)<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://212.2.225.30:1935/live/site.stream/playlist.m3u8</a>
 &nbsp; <a  href='vlc://http://212.2.225.30:1935/live/site.stream/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-TV1 Cinemastan<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://st.kglive.asia/hls/tv1cinema.m3u8</a>
-&nbsp; <a  href='vlc://http://st.kglive.asia/hls/tv1cinema.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 TV1 Бишкек Шаары<br>
@@ -1303,6 +1297,8 @@ Viasat Nature/History HD<br>
 </div>
 <div class=channel>
 Viasat Sport<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://sc.id-tv.kz/ViasatSport_34_35.m3u8</a>
+&nbsp; <a  href='vlc://https://sc.id-tv.kz/ViasatSport_34_35.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://okkotv-live.cdnvideo.ru/channel/Viasat_Sport_HD/480p.m3u8</a>
 &nbsp; <a  href='vlc://https://okkotv-live.cdnvideo.ru/channel/Viasat_Sport_HD/480p.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://flu.ttk.mx:9090/Viasat_Sport/index.m3u8?token=orh6o</a>
@@ -1386,11 +1382,6 @@ Zee TV<br>
 Алмазный край HD<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://stream.almaz-media.tv:8080/hls/720.m3u8</a>
 &nbsp; <a  href='vlc://https://stream.almaz-media.tv:8080/hls/720.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-Анекдот ТВ<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://livetv.mylifeisgood.ml/channels/anekdot.m3u8</a>
-&nbsp; <a  href='vlc://https://livetv.mylifeisgood.ml/channels/anekdot.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Арис 24<br>
@@ -1498,6 +1489,11 @@ Zee TV<br>
 БелРос<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live2.mediacdn.ru/sr1/tro/playlist_1.5M.m3u8</a>
 &nbsp; <a  href='vlc://http://live2.mediacdn.ru/sr1/tro/playlist_1.5M.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
+Беларусь 1 HD<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus1.smil/playlist.m3u8</a>
+&nbsp; <a  href='vlc://https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus1.smil/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Беларусь 2 HD<br>
@@ -1882,11 +1878,6 @@ Zee TV<br>
 &nbsp; <a  href='vlc://http://flu.ttk.mx:9090/Zhivaya_Priroda_HD/index.m3u8?token=orh6o'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Живи Активно<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://livetv.mylifeisgood.ml/channels/jiviactivno.m3u8</a>
-&nbsp; <a  href='vlc://https://livetv.mylifeisgood.ml/channels/jiviactivno.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
 ЗА ТВ<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://s7lbbydibgn.a.trbcdn.net/live/SSJqBtZ6jBWeWZOJ.m3u8</a>
 &nbsp; <a  href='vlc://https://s7lbbydibgn.a.trbcdn.net/live/SSJqBtZ6jBWeWZOJ.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -2034,6 +2025,8 @@ Zee TV<br>
 &nbsp; <a  href='vlc://https://qazaqstantv-stream.qazcdn.com/qazaqstantv/qazaqstantv_540/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://qazaqstantv-stream.qazcdn.com/qazaqstantv/qazaqstantv_720/playlist.m3u8</a>
 &nbsp; <a  href='vlc://https://qazaqstantv-stream.qazcdn.com/qazaqstantv/qazaqstantv_720/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://sc.id-tv.kz/Qazaqstan_international_HD_34_35.m3u8</a>
+&nbsp; <a  href='vlc://https://sc.id-tv.kz/Qazaqstan_international_HD_34_35.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Казахстан International<br>
@@ -2200,11 +2193,6 @@ Zee TV<br>
 &nbsp; <a  href='vlc://https://bl.uma.media/live/400930/HLS/4614144_3/1/1/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Королев ТВ<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://ai5dhpwuk8j.a.trbcdn.net/livemaster/1vr5z0nbo2_KOROLEV-TV/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://ai5dhpwuk8j.a.trbcdn.net/livemaster/1vr5z0nbo2_KOROLEV-TV/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
 Красная линия ТВ<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://s55766.cdn.ngenix.net/s55766-media-origin/rline_high/tracks-v1a1/mono.m3u8</a>
 &nbsp; <a  href='vlc://https://s55766.cdn.ngenix.net/s55766-media-origin/rline_high/tracks-v1a1/mono.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -2359,6 +2347,8 @@ Zee TV<br>
 МИР24 HD<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mir24_2500/playlist.m3u8</a>
 &nbsp; <a  href='vlc://http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mir24_2500/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/hd/playlist.m3u8</a>
+&nbsp; <a  href='vlc://http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/hd/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://okkotv-live.cdnvideo.ru/channel/Mir_24_OTT_HD/1080p.m3u8</a>
 &nbsp; <a  href='vlc://http://okkotv-live.cdnvideo.ru/channel/Mir_24_OTT_HD/1080p.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
@@ -2468,6 +2458,8 @@ Zee TV<br>
 Моя Планета<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://livehlsvgtrkrf.cdnvideo.ru/live/smil:mplan.smil/chunklist_b1600000.m3u8</a>
 &nbsp; <a  href='vlc://http://livehlsvgtrkrf.cdnvideo.ru/live/smil:mplan.smil/chunklist_b1600000.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://sc.id-tv.kz/MoyaPlaneta_34_35.m3u8</a>
+&nbsp; <a  href='vlc://https://sc.id-tv.kz/MoyaPlaneta_34_35.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Моя Планета HD<br>
@@ -2800,11 +2792,6 @@ Zee TV<br>
 &nbsp; <a  href='vlc://http://ott.inmart.tv:8081/17/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Оружие<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://livetv.mylifeisgood.ml/channels/oruzhie.m3u8</a>
-&nbsp; <a  href='vlc://https://livetv.mylifeisgood.ml/channels/oruzhie.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
 Осетия-Ирыстон<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://catchup.videoline.ru/iriston/tracks-v1a1/mono.m3u8</a>
 &nbsp; <a  href='vlc://http://catchup.videoline.ru/iriston/tracks-v1a1/mono.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -2883,11 +2870,6 @@ Zee TV<br>
 Первый Тульский HD<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://1tvtula.ru/tula/1tv_hi/index.m3u8</a>
 &nbsp; <a  href='vlc://http://1tvtula.ru/tula/1tv_hi/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-Первый Харьковский<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://live.26region.tv/app3/stream_bypass/playlist.m3u8</a>
-&nbsp; <a  href='vlc://https://live.26region.tv/app3/stream_bypass/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Первый Ярославский<br>
@@ -2977,11 +2959,6 @@ Zee TV<br>
 Продвижение (Ленинск-Кузнецкий)<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://83.166.243.97:8081/ltv1TNT/1/chunks.m3u8</a>
 &nbsp; <a  href='vlc://http://83.166.243.97:8081/ltv1TNT/1/chunks.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-Продвижение (Стрежевой)<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://live.stv-tv.ru/playlist2.m3u8</a>
-&nbsp; <a  href='vlc://https://live.stv-tv.ru/playlist2.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Прометей-Пятый Регион ТВ<br>
@@ -3147,6 +3124,11 @@ Zee TV<br>
 &nbsp; <a  href='vlc://http://tele2dvrnat01-02.cdnvideo.ru:80/stream/TatTVR_Iskatel/hls/1920x1080@4504/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
+Радио Китап<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://89.251.159.37:8080/hls/kitapfm.m3u8</a>
+&nbsp; <a  href='vlc://http://89.251.159.37:8080/hls/kitapfm.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
 Радио Красноярск FM<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://krasnoyarskfm.ru/cam/hls/krasnoyarskfm.m3u8</a>
 &nbsp; <a  href='vlc://https://krasnoyarskfm.ru/cam/hls/krasnoyarskfm.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -3155,6 +3137,11 @@ Zee TV<br>
 Радио Крым (Веб-камера)<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://cdn.1tvcrimea.ru/radio.m3u8</a>
 &nbsp; <a  href='vlc://https://cdn.1tvcrimea.ru/radio.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
+Радио Кунел<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://89.251.159.37:8080/hls/kunelfm.m3u8</a>
+&nbsp; <a  href='vlc://http://89.251.159.37:8080/hls/kunelfm.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Радио Лемма (Владивосток)<br>
@@ -3192,6 +3179,11 @@ Zee TV<br>
 &nbsp; <a  href='vlc://http://pilotfm.ru:80/cam/hls/pilothd.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
+Радио Рекорд (KG)<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>rtmp://datatop.ts.kg/myapp/recordonline</a>
+&nbsp; <a  href='vlc://rtmp://datatop.ts.kg/myapp/recordonline'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
 Радио России<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://livehlsvgtrkrf.cdnvideo.ru/hls/radio_rus/playlist_4.m3u8</a>
 &nbsp; <a  href='vlc://http://livehlsvgtrkrf.cdnvideo.ru/hls/radio_rus/playlist_4.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -3200,6 +3192,11 @@ Zee TV<br>
 Радио Спутник (Веб-камера)<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://live-rian.cdnvideo.ru/rian/rus-radio/playlist.m3u8</a>
 &nbsp; <a  href='vlc://https://live-rian.cdnvideo.ru/rian/rus-radio/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
+Радио Тартип<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://89.251.159.37:8080/hls/tartipfm.m3u8</a>
+&nbsp; <a  href='vlc://http://89.251.159.37:8080/hls/tartipfm.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Радио Трансмит (Череповец)<br>
@@ -3406,8 +3403,6 @@ Zee TV<br>
 </div>
 <div class=channel>
 Россия 1 (Грозный)<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://live.chechensoft.ru/vainahtv/vaynahtv/playlist.m3u8</a>
-&nbsp; <a  href='vlc://https://live.chechensoft.ru/vainahtv/vaynahtv/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://vgtrkregion-reg.cdnvideo.ru/vgtrk/grozniy/russia1-sd/index.m3u8</a>
 &nbsp; <a  href='vlc://https://vgtrkregion-reg.cdnvideo.ru/vgtrk/grozniy/russia1-sd/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
@@ -4253,10 +4248,10 @@ Zee TV<br>
 </div>
 <div class=channel>
 СТВ (Беларусь)<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://86.57.147.236/HLS/ctvby/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://86.57.147.236/HLS/ctvby/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://80.94.225.126:8080/STV/mono.m3u8</a>
 &nbsp; <a  href='vlc://http://80.94.225.126:8080/STV/mono.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://ctv.dc.beltelecom.by/ctv/ctv.stream/playlist.m3u8</a>
+&nbsp; <a  href='vlc://http://ctv.dc.beltelecom.by/ctv/ctv.stream/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 СТРК<br>
@@ -4409,6 +4404,11 @@ Zee TV<br>
 Север ТВ HD<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live2.mediacdn.ru/sr1/sever/playlist_hdhigh.m3u8</a>
 &nbsp; <a  href='vlc://http://live2.mediacdn.ru/sr1/sever/playlist_hdhigh.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
+Селенга ТВ<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://90.188.37.86/live/playlist.m3u8</a>
+&nbsp; <a  href='vlc://http://90.188.37.86/live/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Сибай ТВ<br>
@@ -4712,8 +4712,6 @@ Zee TV<br>
 ТНВ Татарстан<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://user91229.clients-cdnnow.ru/hls/user91229_1_720/index.m3u8</a>
 &nbsp; <a  href='vlc://https://user91229.clients-cdnnow.ru/hls/user91229_1_720/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://hls-iptv.tattelecom.ru:80/online_tv_TNV/tracks-v1a1/index.m3u8</a>
-&nbsp; <a  href='vlc://http://hls-iptv.tattelecom.ru:80/online_tv_TNV/tracks-v1a1/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 ТНТ<br>
@@ -4805,6 +4803,11 @@ Zee TV<br>
 &nbsp; <a  href='vlc://https://iptv-hls.idc.md/hls/2/live1.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
+ТСТ (Черемхово)<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://90.188.231.186:88/stream.m3u8</a>
+&nbsp; <a  href='vlc://http://90.188.231.186:88/stream.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
 Тайна ТВ<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://tochkatv-live.cdnvideo.ru/tochkatv_pub/tainatv.stream_aac2_720p/playlist.m3u8</a>
 &nbsp; <a  href='vlc://https://tochkatv-live.cdnvideo.ru/tochkatv_pub/tainatv.stream_aac2_720p/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -4816,8 +4819,6 @@ Zee TV<br>
 </div>
 <div class=channel>
 Татарстан 24<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://hls-iptv.tattelecom.ru:80/online_tv_Tatarstan24/tracks-v1a1/index.m3u8</a>
-&nbsp; <a  href='vlc://http://hls-iptv.tattelecom.ru:80/online_tv_Tatarstan24/tracks-v1a1/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://tele2dvrnat01-02.cdnvideo.ru:80/stream/TatTVR_tat24_1f55f482a2df2bede07c661806c4eb/hls/1024x576@1272/playlist.m3u8</a>
 &nbsp; <a  href='vlc://http://tele2dvrnat01-02.cdnvideo.ru:80/stream/TatTVR_tat24_1f55f482a2df2bede07c661806c4eb/hls/1024x576@1272/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
@@ -4840,8 +4841,8 @@ Zee TV<br>
 </div>
 <div class=channel>
 Твое ТВ<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://stream8.chd-servers.ml/Tvoe_tv/index.m3u8</a>
-&nbsp; <a  href='vlc://http://stream8.chd-servers.ml/Tvoe_tv/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://stream1.chd-servers.ml/Tvoe_tv/index.m3u8</a>
+&nbsp; <a  href='vlc://http://stream1.chd-servers.ml/Tvoe_tv/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://tvoetv.space:8080/tvoetv/index.m3u8</a>
 &nbsp; <a  href='vlc://http://tvoetv.space:8080/tvoetv/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
@@ -5108,8 +5109,6 @@ Zee TV<br>
 </div>
 <div class=channel>
 Эфир ТВ<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://hls-iptv.tattelecom.ru:80/online_tv_Efir/tracks-v1a1/index.m3u8</a>
-&nbsp; <a  href='vlc://http://hls-iptv.tattelecom.ru:80/online_tv_Efir/tracks-v1a1/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://tele2dvrnat01-02.cdnvideo.ru/stream/TatTVR_efir_2c28d5412dd75bf975fb951c740a30/hls/1024x576@1272/playlist.m3u8</a>
 &nbsp; <a  href='vlc://http://tele2dvrnat01-02.cdnvideo.ru/stream/TatTVR_efir_2c28d5412dd75bf975fb951c740a30/hls/1024x576@1272/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
