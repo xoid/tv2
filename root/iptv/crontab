@@ -1,0 +1,6 @@
+# m h  dom mon dow   command
+
+5 5 * * * /root/iptv/playlist.sh
+6 * * * * /root/ssh-tun
+6 6 * * 6 /root/freedns.sh
+
