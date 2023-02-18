@@ -1,0 +1,27 @@
+<a href="vlc-protocol-handler.cmd" >vlc1<a>
+<a href="vlc-protocol-register.reg">vlc2<a>
+<script>
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/api/nowplaying');
+
+xhr.onreadystatechange = function()
+{
+  if (xhr.readyState != 4) return;
+
+  if (xhr.status != 200)
+  {
+    console.log(xhr.status + ': ' + xhr.statusText);
+  }
+  else
+  {
+    console.log(xhr.responseText);
+    document.getElementById('nowplaying').innerHTML = xhr.responseText;
+  }
+}
+
+xhr.send();
+
+</script>
+</body>
+</html>

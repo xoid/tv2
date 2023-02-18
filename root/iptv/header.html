@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>
+        IPTV
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+        var now_playing;
+        function play_url(url)
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/api/index.pl', false);
+            now_playing = url
+            xhr.send(url);
+            console.log('xhr send POST' + url);
+            document.location.reload();
+            return false;
+        }
+        function cmd(cmd)
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/api/index.pl?cmd='+cmd, false);
+            xhr.send();
+            console.log('xhr send GET cmd=' + cmd);
+            //document.location.reload();
+            return false;
+        }
+        function archive(ele)
+        {
+          if (event.key === 'Enter' && ele.value.length) 
+          {
+              var  utc = Date.now()/1000 + ele.value * 60;  
+              var lutc = Date.now()/1000
+                   utc =  utc.toFixed();
+                  lutc = lutc.toFixed();
+
+              var now_playing_el;
+              if (document) now_playing_el = document.getElementById('nowplaying');
+
+              if (now_playing_el && ! now_playing)
+              {
+                now_playing = now_playing_el.innerHTML
+                var str = now_playing.replace(/\?.*/, '')
+                var str = `${str}?utc=${utc}&lutc=${lutc}`
+                console.log('archive:' + str)
+                play_url(str)
+              }
+
+          }
+
+        }
+    </script>
+    <style>
+             .channel {border-radius: 10px; background-color: #eeeecc; margin: 10px; }
+    </style>
+</head>
+<body>
+
+<a href='' onclick='cmd("stop")'>           STOP </a> &nbsp;
+<a href='' onclick='play_url(now_playing)'>  restart </a> &nbsp;
+<a href="http://tv.:9091">            torrent </a> &nbsp;
+<a href="video.html">                 Video </a> &nbsp; 
+<br>
+Now playing: <span id='nowplaying'>%nowplayingurl%</span>
+<br>
+Для поиска нажмите Ctrl F 
+<p>
+<a href='' onclick='cmd("seek relative -500"); return false;'>&larr;&larr;</a> 
+<a href='' onclick='cmd("seek relative -60" ); return false;'>&larr;</a> 
+<a href='' onclick='cmd("cycle pause");        return false;'>p</a> 
+<a href='' onclick='cmd("seek relative 60" );  return false;'>&rarr;</a>
+<a href='' onclick='cmd("seek relative 500");  return false;'>&rarr;&rarr;</a>
+<a href='' onclick='cmd("add volume 2" );      return false;'>&uarr;</a>
+<a href='' onclick='cmd("add volume -2");      return false;'>&darr;</a>
+
+архив <input type=text onkeydown="archive(this)"/>
+

@@ -8,7 +8,6 @@
         var now_playing;
         function play_url(url)
         {
-            console.log("play url " + url)
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/api/index.pl', false);
             now_playing = url
@@ -57,7 +56,7 @@
 </head>
 <body>
 
-<a href='' onclick='cmd("stop")'>           STOP </a> &nbsp;
+<a href='' onclick='play_url("");'>           STOP </a> &nbsp;
 <a href='' onclick='play_url(now_playing);'>  restart </a> &nbsp;
 <a href="http://tv.:9091">            torrent </a> &nbsp;
 <a href="video.html">                 Video </a> &nbsp; 

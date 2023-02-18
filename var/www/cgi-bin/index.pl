@@ -7,7 +7,7 @@ my @stdin = <>;
 
 if (@stdin)
 {
-  warn @stdin;
+  warn "STDIN = ".join('|', @stdin)."\n";
   system "echo @stdin > /etc/now_playing.url";
   system "killall mpv";
 }
@@ -15,7 +15,11 @@ if (@stdin)
 if ($ENV{QUERY_STRING} =~ /cmd=(.*)/)
 {
   my $cmd = $1;
-
+  if ($cmd eq 'stop')
+  {
+    system "echo > /etc/now_playing.url";
+    system "killall mpv";
+  }
 }
 
 print "Content-type: text/html; charset: utf-8\n\n";
