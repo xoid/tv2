@@ -8,7 +8,6 @@
         var now_playing;
         function play_url(url)
         {
-            console.log("play url " + url)
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/api/index.pl', false);
             now_playing = url
@@ -58,7 +57,7 @@
 <body>
 
 <a href='' onclick='cmd("stop")'>           STOP </a> &nbsp;
-<a href='' onclick='play_url(now_playing);'>  restart </a> &nbsp;
+<a href='' onclick='play_url(now_playing)'>  restart </a> &nbsp;
 <a href="http://tv.:9091">            torrent </a> &nbsp;
 <a href="video.html">                 Video </a> &nbsp; 
 <br>
@@ -522,16 +521,8 @@ Demo 4k <img src='https://af-play.com/storage/images/pack_logos/5351a2bad4de9202
 Demo Кино HD <img src='https://af-play.com/storage/images/pack_logos/59840c0956b62d9f57953ba15db06998.png' width=32 height=32><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-trailers-hd/video.m3u8</a>
 &nbsp; <a  href='vlc://http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-trailers-hd/video.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-Demo Музыка HD <img src='https://af-play.com/storage/images/pack_logos/bb77425cc336c383419a6348141fc3fb.png' width=32 height=32><br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-music-hd/video.m3u8</a>
-&nbsp; <a  href='vlc://http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-music-hd/video.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-Demo Природа <img src='https://af-play.com/storage/images/pack_logos/8f647d43a618a475303b6dbbabc2ae60.png' width=32 height=32><br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-nature/video.m3u8</a>
-&nbsp; <a  href='vlc://http://bethoven.af-stream.com:1600/s/4lvi6ip3/demo-nature/video.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>    script.src = 'https://parking.reg.ru/script/get_domain_data?domain_name=iptvm3u.ru&rand=' + Math.random() + '&callback=ondata';</a>
+&nbsp; <a  href='vlc://    script.src = 'https://parking.reg.ru/script/get_domain_data?domain_name=iptvm3u.ru&rand=' + Math.random() + '&callback=ondata';'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Discovery<br>
@@ -930,11 +921,6 @@ RT Документальный HD<br>
 &nbsp; <a  href='vlc://http://cdn-01.bonus-tv.ru:8080/rtdoc/tracks-v1a1/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://tv.streams.baikal-telecom.net/RTD_HD/index.m3u8</a>
 &nbsp; <a  href='vlc://http://tv.streams.baikal-telecom.net/RTD_HD/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-RTG<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://217.107.219.67:8033/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://217.107.219.67:8033/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 RU TV<br>
@@ -1433,6 +1419,11 @@ XXI<br>
 &nbsp; <a  href='vlc://http://live2-aisttv.cdnvideo.ru/aisttv2/aisttv.sdp/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
+Алания 24<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://hls-alaniatv.cdnvideo.ru/alaniatv/alania1/playlist.m3u8</a>
+&nbsp; <a  href='vlc://http://hls-alaniatv.cdnvideo.ru/alaniatv/alania1/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
 Алау<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://otv.wotom.net/alau/stream.m3u8</a>
 &nbsp; <a  href='vlc://https://otv.wotom.net/alau/stream.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -1689,11 +1680,6 @@ XXI<br>
 &nbsp; <a  href='vlc://http://live-nntv2.cdnvideo.ru/nntv2/vremyan/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Волгоград 1<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>rtmp://88.87.93.33:2000/live/volgograd1</a>
-&nbsp; <a  href='vlc://rtmp://88.87.93.33:2000/live/volgograd1'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
 Волгоград 24<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://vgtrkregion.cdnvideo.ru/vgtrk/volgograd/regionHD/playlist_sdhigh.m3u8</a>
 &nbsp; <a  href='vlc://https://vgtrkregion.cdnvideo.ru/vgtrk/volgograd/regionHD/playlist_sdhigh.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -1728,9 +1714,9 @@ XXI<br>
 &nbsp; <a  href='vlc://http://flu.ttk.mx:9090/Vremya/index.m3u8?token=orh6o'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Выборг ТВ HD<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-nashgorod.cdnvideo.ru/nashgorod/nashgorod_720p/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://live-nashgorod.cdnvideo.ru/nashgorod/nashgorod_720p/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+Выборг ТВ<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-nashgorod.cdnvideo.ru/nashgorod/nashgorod_480p/playlist.m3u8</a>
+&nbsp; <a  href='vlc://http://live-nashgorod.cdnvideo.ru/nashgorod/nashgorod_480p/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Глазами Туриста<br>
@@ -1763,11 +1749,6 @@ XXI<br>
 Губерния (Хабаровск)<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://media1.gubernia.com/hls/live.m3u8</a>
 &nbsp; <a  href='vlc://https://media1.gubernia.com/hls/live.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-Губерния 33 (Владимир)<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-trc33.cdnvideo.ru/trc33/trc33.sdp/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://live-trc33.cdnvideo.ru/trc33/trc33.sdp/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Губерния Самара<br>
@@ -1816,8 +1797,6 @@ XXI<br>
 Диалоги о рыбалке<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://livetv.mylifeisgood.ml/channels/dialogiorybalke.m3u8</a>
 &nbsp; <a  href='vlc://https://livetv.mylifeisgood.ml/channels/dialogiorybalke.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://217.107.219.67:8007/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://217.107.219.67:8007/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Дикая Рыбалка<br>
@@ -1964,11 +1943,6 @@ XXI<br>
 &nbsp; <a  href='vlc://http://138.201.67.145:8081/zhivi/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-ЗА ТВ<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://s7lbbydibgn.a.trbcdn.net/live/SSJqBtZ6jBWeWZOJ.m3u8</a>
-&nbsp; <a  href='vlc://https://s7lbbydibgn.a.trbcdn.net/live/SSJqBtZ6jBWeWZOJ.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
 Загородная Жизнь<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://sc.id-tv.kz/Zagorod_34_35.m3u8</a>
 &nbsp; <a  href='vlc://https://sc.id-tv.kz/Zagorod_34_35.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -2029,6 +2003,8 @@ XXI<br>
 Известия ТВ<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://igi-hls.cdnvideo.ru/igi/igi_tcode/tracks-v2a1/index.m3u8</a>
 &nbsp; <a  href='vlc://http://igi-hls.cdnvideo.ru/igi/igi_tcode/tracks-v2a1/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://hls-igi.cdnvideo.ru/igi/igi_sq/playlist.m3u8</a>
+&nbsp; <a  href='vlc://http://hls-igi.cdnvideo.ru/igi/igi_sq/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>https://okkotv-live.cdnvideo.ru/channel/Izvestiya_HD_2/480p.m3u8</a>
 &nbsp; <a  href='vlc://https://okkotv-live.cdnvideo.ru/channel/Izvestiya_HD_2/480p.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
@@ -2510,11 +2486,6 @@ XXI<br>
 &nbsp; <a  href='vlc://http://live-saha.cdnvideo.ru/saha2/mamont_live.smil/tracks-v2a1/mono.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Мамонт ТВ [HD]<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-saha.cdnvideo.ru/saha/mamont/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://live-saha.cdnvideo.ru/saha/mamont/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
 Матур ТВ HD<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://213.59.128.165:8080/Matur_TV/index.m3u8</a>
 &nbsp; <a  href='vlc://http://213.59.128.165:8080/Matur_TV/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -2650,11 +2621,6 @@ XXI<br>
 НВК Саха<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-saha.cdnvideo.ru/saha2/saha_live.smil/tracks-v2a1/mono.m3u8</a>
 &nbsp; <a  href='vlc://http://live-saha.cdnvideo.ru/saha2/saha_live.smil/tracks-v2a1/mono.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-НВК Саха HD<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-saha.cdnvideo.ru/saha/saha/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://live-saha.cdnvideo.ru/saha/saha/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 ННТВ (Нижний Новгород)<br>
@@ -2916,6 +2882,8 @@ XXI<br>
 Оплот<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://31.133.57.158/hls/1234.m3u8</a>
 &nbsp; <a  href='vlc://http://31.133.57.158/hls/1234.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://ott.inmart.tv:8081/54/index.m3u8</a>
+&nbsp; <a  href='vlc://http://ott.inmart.tv:8081/54/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Оружие<br>
@@ -4659,6 +4627,11 @@ XXI<br>
 &nbsp; <a  href='vlc://https://flu.ttk.mx/Disney/index.m3u8?token=orh6o'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
+Соловьев Live (Новороссия)<br>
+<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://ott.inmart.tv:8081/19/index.m3u8</a>
+&nbsp; <a  href='vlc://http://ott.inmart.tv:8081/19/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
+</div>
+<div class=channel>
 Соловьев Live ТВ<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://livehlsvgtrkrf.cdnvideo.ru/hls/solovievlive/playlist_3.m3u8</a>
 &nbsp; <a  href='vlc://http://livehlsvgtrkrf.cdnvideo.ru/hls/solovievlive/playlist_3.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -5124,11 +5097,6 @@ XXI<br>
 &nbsp; <a  href='vlc://http://92.46.127.146:8080/TuranTV-L3-TRANS/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
-Тюменское Время<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://hls-sibinformburo.cdnvideo.ru/sibinformburo/sibinformburo.sdp/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://hls-sibinformburo.cdnvideo.ru/sibinformburo/sibinformburo.sdp/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
 УлПравда ТВ HD<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-1.otcnet.ru/pravdatv/index.m3u8</a>
 &nbsp; <a  href='vlc://http://live-1.otcnet.ru/pravdatv/index.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
@@ -5323,11 +5291,6 @@ XXI<br>
 Якутия 24<br>
 <a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-saha.cdnvideo.ru/saha2/yak24rtmp_live.smil/tracks-v2a1/mono.m3u8</a>
 &nbsp; <a  href='vlc://http://live-saha.cdnvideo.ru/saha2/yak24rtmp_live.smil/tracks-v2a1/mono.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
-</div>
-<div class=channel>
-Якутия 24 HD<br>
-<a  href='' onclick='this.style.color="green"; return play_url(this.innerHTML);'>http://live-saha.cdnvideo.ru/saha/yak24rtmp/playlist.m3u8</a>
-&nbsp; <a  href='vlc://http://live-saha.cdnvideo.ru/saha/yak24rtmp/playlist.m3u8'><img width=16 height=16 src=vlc.ico></a><br>
 </div>
 <div class=channel>
 Ямал 1 HD<br>
