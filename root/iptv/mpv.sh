@@ -15,7 +15,7 @@ do
    [ -n "$URL" ] || continue
    /root/iptv/xtext "$URL"
 
-   nice -n 15 mpv --vo=gpu --hwdec=drm  --cache=yes --cache-secs=60 --input-unix-socket=/tmp/mpv.sock  --network-timeout=10 -fs "$URL"
+   nice -n 15 mpv --vo=gpu --hwdec=drm  --cache=yes --cache-secs=60 --input-ipc-server=/tmp/mpv.sock  --network-timeout=10 -fs "$URL"
 
 #   nice -n 15 su - vul -c "mpv --quiet --vo=vdpau --hwdec=vdpau --hwdec-codecs=all --load-unsafe-playlists \
 #   --demuxer-thread=yes --cache-secs=60 --input-unix-socket=/tmp/mpv.sock \

@@ -13,5 +13,5 @@
 
 /usr/bin/startx &
 /root/iptv/mpv.sh &
-
+/root/iptv/mpv-watcher.sh &
 exit 0
