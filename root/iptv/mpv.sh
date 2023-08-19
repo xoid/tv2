@@ -1,5 +1,5 @@
 #!/bin/bash
-exec >> /tmp/mpv.log 2>&1
+exec > /tmp/mpv.log 2>&1
 
 export DISPLAY=:0
 kill -9 `ps aux|grep -v grep|grep -v $$|grep mpv.sh|awk '{print $2}'`
@@ -15,7 +15,9 @@ do
    [ -n "$URL" ] || continue
    /root/iptv/xtext "$URL"
 
-   nice -n 15 mpv --vo=gpu --hwdec=drm  --cache=yes --cache-secs=60 --input-ipc-server=/tmp/mpv.sock  --network-timeout=10 -fs "$URL"
+   #nice -n 15 
+   #mpv -v --vo=gpu --hwdec=drm  --cache=yes --cache-secs=60 --input-ipc-server=/tmp/mpv.sock  --network-timeout=10 -fs "$URL"
+   mpv -v --vo=vdpau --hwdec-codecs=all  --cache=yes --cache-secs=60 --input-ipc-server=/tmp/mpv.sock  --network-timeout=10 -fs "$URL"
 
 #   nice -n 15 su - vul -c "mpv --quiet --vo=vdpau --hwdec=vdpau --hwdec-codecs=all --load-unsafe-playlists \
 #   --demuxer-thread=yes --cache-secs=60 --input-unix-socket=/tmp/mpv.sock \

@@ -2,7 +2,7 @@
 
 exec>/tmp/mpv-watcher.log 2>&1
 
-while sleep 10
+while sleep 20
 do
   SIZE=`ls -l  /tmp/mpv.log| cut -d ' ' -f 5`
 
